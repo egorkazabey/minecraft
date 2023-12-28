@@ -1,0 +1,41 @@
+.logo__nav {
+    padding-top: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul {
+    gap: 74px;
+    display: flex;
+}
+
+.nav__listItem {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+}
+
+.link {
+    text-decoration: none;
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: 0.3s;  /* Добавлен переход */
+}
+
+.link:hover::after {
+    width: 100%;  /* Расширение подчеркивания при наведении */
+    transform: translateX(-50%);
+}
